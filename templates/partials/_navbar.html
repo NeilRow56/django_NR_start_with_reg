@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+  <!-- Navbar -->
+<nav id="main-nav-udemy">
+    <div class="container-udemy">
+        <img src="{% static 'img/icon.png' %}" class="logo" alt="Accountancy WIP logo">
+        <div>
+            {% if user.is_authenticated %}
+            <h5>Logged in as: &#8287 &#8287 {{ user.username }}</h5>
+            {% endif %}
+        </div>
+        <ul id="navbar-udemy">
+            {% if user.is_superuser %}
+            <li class="mr-2"> <a class="" href="{% url 'admin:index' %}"> Admin</a></li>
+            {% else %}
+            
+            {% endif %}
+            <li class="mr-2 {% if '/' == request.path %} active{% endif %}"><a href="{% url 'index' %}">Home</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="#">Extra1</a></li>
+            <li><a href="#">Extra2</a></li>
+            <li><a href="#">Extra3</a></li>
+            <li><a href="#">Extra4</a></li>  
+            <li class="mr-2{% if 'logout' in request.path %} active{% endif %}"><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}         
+            <li class="mr-2 mr-2{% if 'register' in request.path %} active{% endif %}"><a href="{% url 'register' %}">Register</a></li>
+            <li class="mr-2{% if 'login' in request.path %} active{% endif %}" ><a href="{% url 'login' %}">Login</a></li>
+            
+            {% endif%}
+        </ul>
+    </div>
+</nav>
+  

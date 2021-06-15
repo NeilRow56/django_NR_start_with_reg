@@ -1,0 +1,102 @@
+:root {
+	--primary-color: #2e598f;
+	--secondary-color: #a4b6c1;
+	--light-color: #f3f3f3;
+	--dark-color: #0c2141;
+	--max-width: 1800;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	color: cornflowerblue;
+}
+ul {
+	list-style: none;
+}
+
+h1 {
+	color: black;
+}
+h5 {
+	color: #f3f3f3;
+}
+.active {
+	background-color: maroon;
+}
+
+#main-nav-udemy {
+	background: var(--primary-color);
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+.container-udemy {
+	max-width: var(--max-width);
+	margin: auto;
+	padding: 0 2rem;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 5fr 3fr 4fr;
+	align-items: center;
+}
+#main-nav-udemy ul {
+	justify-self: end;
+	display: flex;
+}
+
+#main-nav-udemy ul li a {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	color: #f3f3f3;
+}
+#main-nav-udemy .logo {
+	width: 45px;
+	height: 45px;
+}
+#main-nav-udemy ul li a:hover {
+	color: maroon;
+	background: var(--secondary-color);
+}
+
+#navbar-udemy li a {
+	color: var(--light-color);
+	list-style-type: none;
+	text-decoration: none;
+	display: block;
+	padding: 15px 20px;
+}
+.navbar-udemy li a:hover {
+	color: var(--light-color);
+	background-color: var(--secondary-color);
+}
+
+.sidebar {
+	background-color: blueviolet;
+	color: ghostwhite;
+	min-height: 800px;
+	padding-top: 10px;
+	text-decoration: white;
+}
+
+.main-content {
+	background-color: pink;
+	min-height: 800px;
+	padding-top: 10px;
+}
+.bottom-section-content {
+	background-color: crimson;
+	height: 50px;
+	padding-top: 10px;
+}
+#main-footer {
+	background: var(--primary-color);
+	color: var(--light-color);
+	padding-top: 10px;
+
+	height: 3rem;
+}

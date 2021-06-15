@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %} | Logout  {% endblock %}
+
+{% block content %}
+    
+<section id="register" class="bg-light min-vh-100 d-flex align-items-center justify-content-center py-5">
+    <div class="container ">
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+        
+            <div class="col-4">
+                <h2>You have been logged out</h2>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+
+            </div>
+        
+            <div class="col-4">
+                <small class="text-muted align-items-center justify-content-center">
+                    <a href="{% url 'login' %}">Log In Again</a>
+                </small>
+            </div>
+            <div class="col-4">
+
+            </div>
+            
+        
+    </div>
+    </div>
+
+</section>
+        
+    
+{% endblock content %}
